@@ -1,0 +1,12 @@
+{
+  "name": "PokeAPIProject",
+  "version": "1.0.0",
+  "description": "Pokedex for Showpad interview",
+  "main": "index.js",
+  "repository": "https://github.com/rymanacevedo/pokedex.git",
+  "author": "Ryan Acevedo",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ng serve"
+  }
+}
