@@ -17,9 +17,11 @@ export class PokedexComponent implements OnInit {
   }
 
   getAllPokemon(): void {
-   this.service.getAllPokemon().subscribe((p: Pokemon[]) => {
-     console.log(p);
-      this.allPokemon = p ;
+   this.service.getAllPokemon().subscribe((p: any[]) => {
+     p.forEach((v: any, i: number) => {
+      v.id = i + 1;
+      this.allPokemon.push(v);
+     });
     });
   }
 

@@ -1,7 +1,11 @@
 <ul>
   <li *ngFor="let pokemon of allPokemon">
-    <span>
-      {{pokemon.name}}
-    </span>
+    <a routerLink="/details/{{pokemon.id}}">
+      <span>
+        {{pokemon.name}}
+      </span>
+
+    </a>
+    <span>{{pokemon.url}}</span>
   </li>
 </ul>
