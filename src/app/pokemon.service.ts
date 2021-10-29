@@ -14,7 +14,9 @@ export class PokemonService {
 
   getPokemon(id: number): Observable<Object> {
     const url = `${this.api}/${id}`;
-    const response = this._http.get<Pokemon>(url);
+    const response = this._http.get(url).pipe(
+      map((res: any) => res)
+    );
     return response;
   }
 
