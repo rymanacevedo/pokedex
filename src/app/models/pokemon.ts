@@ -1,4 +1,5 @@
 import { Ability } from './ability';
+import { Stat } from './state';
 import { NameUrl } from './type';
 export interface Pokemon {
   id: number;
@@ -7,5 +8,5 @@ export interface Pokemon {
   abilities: Array<Ability>;
   forms: Array<NameUrl>;
   species: Array<NameUrl>;
-
+  states: Array<Stat>;
 }
