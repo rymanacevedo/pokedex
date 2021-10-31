@@ -9,17 +9,11 @@ import { Pokemon } from '../models/pokemon';
 })
 export class PokedexComponent implements OnInit {
   allPokemon: Pokemon[] = [];
-  selectedPokemon?: Pokemon
 
   constructor(private service: PokemonService) { }
 
   ngOnInit(): void {
     this.getAllPokemon();
-  }
-
-  getPokeman(pokemon: Pokemon): void {
-    this.selectedPokemon = pokemon;
-    const v = this.service.getPokemon(pokemon.id);
   }
 
   getAllPokemon(): void {

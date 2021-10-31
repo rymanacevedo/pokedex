@@ -1,6 +1,6 @@
 <ul>
   <li *ngFor="let pokemon of allPokemon">
-    <a (click)="getPokeman(pokemon)" >
+    <a routerLink="/details/{{pokemon.id}}" >
       <span>
         {{pokemon.name}}
       </span>
@@ -9,5 +9,3 @@
     <span>{{pokemon.url}}</span>
   </li>
 </ul>
-
-<app-pokemon [selectedPokemon]="selectedPokemon"></app-pokemon>
