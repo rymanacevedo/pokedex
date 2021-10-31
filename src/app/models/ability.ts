@@ -1,4 +1,4 @@
-import { NameUrl } from './type';
+import { NameUrl } from './nameurl';
 export interface Ability {
   obj: NameUrl;
   is_hidden: boolean;
