@@ -11,4 +11,5 @@ export interface Pokemon {
   species: Array<NameUrl>;
   states: Array<Stat>;
   types: Array<Type>;
+  weight: number;
 }
