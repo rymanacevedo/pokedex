@@ -9,7 +9,7 @@ export interface Pokemon {
   abilities: Array<Ability>;
   forms: Array<NameUrl>;
   species: Array<NameUrl>;
-  states: Array<Stat>;
+  stats: Array<Stat>;
   types: Array<Type>;
   weight: number;
 }
