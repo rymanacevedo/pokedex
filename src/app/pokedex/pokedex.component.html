@@ -1,3 +1,5 @@
+<button *ngIf="previous" (click)="callback(previous)">prev</button>
+<button *ngIf="next" (click)="callback(next)">next</button>
 <ul>
   <li *ngFor="let pokemon of allPokemon">
     <a routerLink="/details/{{pokemon.id}}" >

@@ -9,7 +9,8 @@ import { Pokemon } from '../models/pokemon';
 })
 export class PokedexComponent implements OnInit {
   allPokemon: Pokemon[] = [];
-
+  next?: string;
+  previous?: string;
   constructor(private service: PokemonService) { }
 
   ngOnInit(): void {
@@ -17,12 +18,29 @@ export class PokedexComponent implements OnInit {
   }
 
   getAllPokemon(): void {
-   this.service.getAllPokemon().subscribe((p: any[]) => {
-     p.forEach((v: any, i: number) => {
+   this.service.getAllPokemon().subscribe((p: any) => {
+    this.next = p.next;
+    this.previous = p.previous;
+    let temp: Pokemon[] = [];
+     p.results.forEach((v: any, i: number) => {
       v.id = i + 1;
-      this.allPokemon.push(v);
+      temp.push(v);
      });
+     this.allPokemon = temp;
     });
+  }
+
+  callback(url: string): void {
+    this.service.getResponse(url).subscribe((p: any) => {
+      this.next = p.next;
+      this.previous = p.previous;
+      let temp: Pokemon[] = [];
+      p.results.forEach((v: any, i: number) => {
+       v.id = i + 1;
+       temp.push(v);
+      });
+      this.allPokemon = temp;
+     });
   }
 
 }

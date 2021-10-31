@@ -14,18 +14,18 @@ export class PokemonService {
 
   getPokemon(id: number): Observable<Pokemon> {
     const url = `${this.api}/${id}`;
+    return this.getResponse(url);
+  }
+
+  getAllPokemon(): Observable<Pokemon[]> {
+    const url = `${this.api}`;
+    return this.getResponse(url);
+  }
+
+  getResponse(url: string): Observable<any> {
     const response = this._http.get(url).pipe(
       map((res: any) => res)
     );
     return response;
   }
-
-  getAllPokemon(): Observable<Pokemon[]> {
-    const url = `${this.api}`;
-    const response = this._http.get<Pokemon[]>(url).pipe(
-      map((res: any) => res.results)
-    );
-    return response;
-  }
-
 }
