@@ -6,4 +6,6 @@ export interface Pokemon {
   url: string;
   abilities: Array<Ability>;
   forms: Array<NameUrl>;
+  species: Array<NameUrl>;
+
 }
