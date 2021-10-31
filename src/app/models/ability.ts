@@ -1,6 +1,6 @@
 import { NameUrl } from './nameurl';
 export interface Ability {
-  obj: NameUrl;
+  ability: NameUrl;
   is_hidden: boolean;
   slot: number;
 }
