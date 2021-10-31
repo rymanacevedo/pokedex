@@ -20,6 +20,7 @@ export class PokemonDetailsComponent implements OnInit {
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('slug'));
     this.service.getPokemon(id).subscribe((pokemon: Pokemon) => this.pokemon = pokemon);
+
   }
 
   goBack(): void {
