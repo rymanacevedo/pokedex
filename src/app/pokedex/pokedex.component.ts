@@ -14,23 +14,10 @@ export class PokedexComponent implements OnInit {
   constructor(private service: PokemonService) { }
 
   ngOnInit(): void {
-    this.getAllPokemon();
+    this.callback();
   }
 
-  getAllPokemon(): void {
-   this.service.getAllPokemon().subscribe((p: any) => {
-    this.next = p.next;
-    this.previous = p.previous;
-    let temp: Pokemon[] = [];
-     p.results.forEach((v: any, i: number) => {
-      v.id = i + 1;
-      temp.push(v);
-     });
-     this.allPokemon = temp;
-    });
-  }
-
-  callback(url: string): void {
+  callback(url?: string): void {
     this.service.getResponse(url).subscribe((p: any) => {
       this.next = p.next;
       this.previous = p.previous;

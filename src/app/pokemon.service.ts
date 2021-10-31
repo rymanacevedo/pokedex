@@ -17,12 +17,7 @@ export class PokemonService {
     return this.getResponse(url);
   }
 
-  getAllPokemon(): Observable<Pokemon[]> {
-    const url = `${this.api}`;
-    return this.getResponse(url);
-  }
-
-  getResponse(url: string): Observable<any> {
+  getResponse(url: string = this.api): Observable<any> {
     const response = this._http.get(url).pipe(
       map((res: any) => res)
     );
