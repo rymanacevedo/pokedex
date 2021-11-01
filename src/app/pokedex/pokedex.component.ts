@@ -9,8 +9,10 @@ import { Pokemon } from '../models/pokemon';
 })
 export class PokedexComponent implements OnInit {
   allPokemon: Pokemon[] = [];
-  next?: string;
-  previous?: string;
+  next: string = '';
+  previous?: string = '';
+  offset: number = 0;
+  limit: number = 0;
   constructor(private service: PokemonService) { }
 
   ngOnInit(): void {
@@ -18,12 +20,17 @@ export class PokedexComponent implements OnInit {
   }
 
   callback(url?: string): void {
-    this.service.getResponse(url).subscribe((p: any) => {
-      this.next = p.next;
-      this.previous = p.previous;
+    this.service.getResponse(url).subscribe((res: any) => {
+      this.next = res.next;
+      this.previous = res.previous;
+      const url = new URL(this.next);
+      const para = new URLSearchParams(url.search);
+      this.offset = Number(para.get('offset'));
+      this.limit = Number(para.get('limit'));
       let temp: Pokemon[] = [];
-      p.results.forEach((v: any, i: number) => {
+      res.results.forEach((v: any, i: number) => {
        v.id = i + 1;
+       v.id += (this.offset - this.limit);
        temp.push(v);
       });
       this.allPokemon = temp;
