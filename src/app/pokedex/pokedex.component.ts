@@ -10,7 +10,7 @@ import { Pokemon } from '../models/pokemon';
 export class PokedexComponent implements OnInit {
   allPokemon: Pokemon[] = [];
   next: string = '';
-  previous?: string = '';
+  previous?: string
   offset: number = 0;
   limit: number = 0;
   constructor(private service: PokemonService) { }
