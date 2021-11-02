@@ -1,30 +1,34 @@
 
 <button (click)="goBack()">go back</button>
 <div *ngIf="pokemon">
-  <p>id: {{pokemon.id}}</p>
-  <h2>name: {{pokemon.name}} : Species: {{pokemon.species.name}} <span class="br ba br-pill pa2 mr2" *ngFor="let item of pokemon.types">{{item.type.name}}</span></h2>
-  <div class="flex">
-    <div>
-      <img src="{{pokemon.sprites.front_default}}" alt="photo of {{pokemon.name}}">
-      <p>weight: {{pokemon.weight}}</p>
+  <h2>Name: {{pokemon.name | titlecase}} <span class="br ba br-pill pa2 mr2" *ngFor="let item of pokemon.types">{{item.type.name}}</span></h2>
+  <h2>Species: {{pokemon.species.name | titlecase}}</h2>
+
+  <div class="flex flex-column flex-row-ns justify-around">
+    <div class="flex flex-column w-40-ns">
+      <img class="" src="{{pokemon.sprites.front_default}}" alt="photo of {{pokemon.name}}">
+      <p class="b">Weight: {{pokemon.weight}}lbs</p>
     </div>
-    <div>
-      <p>abilities:
-        <span *ngFor="let ability of pokemon.abilities">
-          {{ability.ability?.name}}
-        </span>
-      </p>
-      <p>forms:
+    <div class="flex flex-column">
+      <div>
+        <h3>Abilities:</h3>
+        <p *ngFor="let ability of pokemon.abilities">
+          {{ability.ability?.name | titlecase}}
+        </p>
+      </div>
+      <div>
+        <h3>Forms:</h3>
         <span *ngFor="let form of pokemon.forms">
-          {{form?.name}}
+          {{form?.name | titlecase}}
         </span>
-      </p>
-      <p>stats:
-        <span *ngFor="let item of pokemon.stats">
-          {{item.stat?.name}}
+      </div>
+      <div>
+        <h3>Stats: </h3>
+        <p *ngFor="let item of pokemon.stats">
+          {{item.stat?.name | titlecase}}:
           {{item.base_stat}}
-        </span>
-      </p>
+        </p>
+      </div>
     </div>
   </div>
 </div>
