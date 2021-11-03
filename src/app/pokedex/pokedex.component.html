@@ -14,13 +14,12 @@
     </svg>
   </button>
 </div>
-<ul>
-  <li *ngFor="let pokemon of allPokemon">
+<ul class="list pl0 ml0 ba b--light-silver br2">
+  <li class="ph3 pv2 bb b--light-silver" *ngFor="let pokemon of allPokemon">
     <a routerLink="/details/{{pokemon.id}}" >
       <span>
         {{pokemon.name}}
       </span>
-
     </a>
   </li>
 </ul>
