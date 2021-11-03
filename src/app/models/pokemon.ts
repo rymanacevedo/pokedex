@@ -14,4 +14,6 @@ export interface Pokemon {
   stats: Array<Stat>;
   types: Array<Type>;
   weight: number;
+  isCaught: boolean;
+  isWishlist: boolean;
 }
