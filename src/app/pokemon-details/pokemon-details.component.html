@@ -12,21 +12,9 @@
       <img class="" src="{{pokemon.sprites.front_default}}" alt="photo of {{pokemon.name}}">
       <p class="b center">Weight: {{pokemon.weight}}lbs</p>
 
-      <label class="center toggle" for="favorites">
-        <input type="checkbox" class="toggle__input" id="favorites" />
-        <span class="toggle-track">
-          <span class="toggle-indicator"></span>
-        </span>
-        Want to catch
-      </label>
+      <app-checkbox label="Want to catch" class="center"></app-checkbox>
 
-      <label class="center toggle" for="alreadycaught">
-        <input type="checkbox" class="toggle__input" id="alreadycaught" />
-        <span class="toggle-track">
-          <span class="toggle-indicator"></span>
-        </span>
-        Already caught
-      </label>
+      <app-checkbox label="Already caught" class="center"></app-checkbox>
     </div>
     <div class="flex flex-column">
       <div>
