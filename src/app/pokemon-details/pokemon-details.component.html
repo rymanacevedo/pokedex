@@ -11,6 +11,22 @@
     <div class="flex flex-column w-40-ns">
       <img class="" src="{{pokemon.sprites.front_default}}" alt="photo of {{pokemon.name}}">
       <p class="b center">Weight: {{pokemon.weight}}lbs</p>
+
+      <label class="center toggle" for="favorites">
+        <input type="checkbox" class="toggle__input" id="favorites" />
+        <span class="toggle-track">
+          <span class="toggle-indicator"></span>
+        </span>
+        Want to catch
+      </label>
+
+      <label class="center toggle" for="alreadycaught">
+        <input type="checkbox" class="toggle__input" id="alreadycaught" />
+        <span class="toggle-track">
+          <span class="toggle-indicator"></span>
+        </span>
+        Already caught
+      </label>
     </div>
     <div class="flex flex-column">
       <div>

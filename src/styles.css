@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+.t-cb { transition: all .3s cubic-bezier(.33, 1, .66, 1); }
+
+.checkbox:checked + .checkbox-wrapper {
+  background-color: green;
+
+  .checkbox-toggle {
+    left: 2rem;
+    background-color: #ccc;
+  }
+}
