@@ -1,13 +1,13 @@
 
 <button (click)="goBack()">go back</button>
 <div *ngIf="pokemon">
-  <h2>Name: {{pokemon.name | titlecase}} <span class="br ba br-pill pa2 mr2" *ngFor="let item of pokemon.types">{{item.type.name}}</span></h2>
-  <h2>Species: {{pokemon.species.name | titlecase}}</h2>
+  <h2 class="dib ma2">Name: {{pokemon.name | titlecase}} </h2> <span class="ma2 br ba br-pill pa2" *ngFor="let item of pokemon.types">{{item.type.name}}</span>
+  <h2 class="ma2">Species: {{pokemon.species.name | titlecase}}</h2>
 
   <div class="flex flex-column flex-row-ns justify-around">
     <div class="flex flex-column w-40-ns">
       <img class="" src="{{pokemon.sprites.front_default}}" alt="photo of {{pokemon.name}}">
-      <p class="b">Weight: {{pokemon.weight}}lbs</p>
+      <p class="b center">Weight: {{pokemon.weight}}lbs</p>
     </div>
     <div class="flex flex-column">
       <div>

@@ -33,7 +33,7 @@ export class PokedexComponent implements OnInit {
        v.id += (this.offset - this.limit);
        temp.push(v);
       });
-      this.allPokemon = temp;
+      this.allPokemon = temp.slice();
      });
   }
 
