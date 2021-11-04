@@ -16,6 +16,7 @@
   </ng-container>
   <ng-container *ngIf="pagesArray.length > 10" >
     <select
+      #inputEl
       [ngModel]="currentPage"
       (ngModelChange)="setPage($event.target.value)"
     >

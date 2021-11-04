@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.compo
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { CheckboxComponent } from './pokemon-details/checkbox/checkbox.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { AppSearchComponent } from './app-search/app-search.component';
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { PaginationComponent } from './pagination/pagination.component';
     PokemonDetailsComponent,
     PokemonComponent,
     CheckboxComponent,
-    PaginationComponent
+    PaginationComponent,
+    AppSearchComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
