@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { CheckboxComponent } from './pokemon-details/checkbox/checkbox.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CheckboxComponent } from './pokemon-details/checkbox/checkbox.component
     PokedexComponent,
     PokemonDetailsComponent,
     PokemonComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

@@ -29,7 +29,6 @@ export class PokemonDetailsComponent implements OnInit {
       this.pokemon.isCaught == undefined ? pokemon.isCaught = false : pokemon.isCaught;
       this.pokemon.isWishlist  == undefined ? pokemon.isWishlist = false : pokemon.isWishlist;
     });
-
   }
 
   goBack(): void {
