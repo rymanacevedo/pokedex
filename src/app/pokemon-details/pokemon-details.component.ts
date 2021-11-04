@@ -1,8 +1,8 @@
-import { PokemonService } from './../pokemon.service';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Pokemon } from '../models/pokemon';
+import { PokemonService } from '../services/pokemon.service';
 interface Test {
   checked: boolean;
   type: string;
