@@ -1,5 +1,5 @@
 <label class="toggle" for="{{label}}">
-  <input type="checkbox" class="toggle__input" id="{{label}}" />
+  <input #inputEl [checked]="isChecked" (change)=onChange(inputEl.checked) type="checkbox" class="toggle__input" id="{{label}}" />
   <span class="toggle-track">
     <span class="toggle-indicator"></span>
   </span>

@@ -12,11 +12,12 @@
       <img class="" src="{{pokemon.sprites.front_default}}" alt="photo of {{pokemon.name}}">
       <p class="b center">Weight: {{pokemon.weight}}lbs</p>
 
-      <app-checkbox label="Want to catch" class="center"></app-checkbox>
+      <app-checkbox [isChecked]="pokemon.isWishlist" (checkboxChange)="addToList($event)" label="{{favorites}}" class="center"></app-checkbox>
 
-      <app-checkbox label="Already caught" class="center"></app-checkbox>
+      <app-checkbox [isChecked]="pokemon.isCaught" (checkboxChange)="addToList($event)" label="{{caught}}" class="center"></app-checkbox>
+
     </div>
-    <div class="flex flex-column">
+    <div class="flex flex-column pa3">
       <div>
         <h3>Abilities:</h3>
         <p *ngFor="let ability of pokemon.abilities">

@@ -9,6 +9,7 @@ import { PokedexComponent } from './pokedex/pokedex.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
+import { CheckboxComponent } from './pokemon-details/checkbox/checkbox.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PokemonComponent } from './pokemon/pokemon.component';
     DashboardComponent,
     PokedexComponent,
     PokemonDetailsComponent,
-    PokemonComponent
+    PokemonComponent,
+    CheckboxComponent
   ],
   imports: [
     BrowserModule,
